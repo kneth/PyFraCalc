@@ -28,3 +28,11 @@ On Ubuntu Linux 24.04 you need to install a number of packages:
 ```sh
 sudo apt install antlr4 python3-antlr4
 ```
+
+## Building
+
+You can generate the lexer and parser with the following command:
+
+```sh
+antlr4 -Dlanguage=Python3 calculator.g4
+```
