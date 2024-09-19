@@ -46,5 +46,14 @@ class Fraction:
             self.denominator * f.denominator,
         )
 
+    def __sub__(self, f):
+        return Fraction(
+            self.denominator * f.numerator - f.denominator * self.numerator,
+            self.denominator * f.denominator,
+        )
+
+    def __div__(self, f):
+        return Fraction(self.numerator * f.denominator, self.denominator * f.numerator)
+
     def __str__(self):
         return str(self.numerator) + "/" + str(self.denominator)
